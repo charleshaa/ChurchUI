@@ -1,11 +1,11 @@
 {
-  "name": "Church UI",
-  "version": "0.1",
-  "description": "ChurchBot GUI built with Electron and Angular 5",
-  "homepage": "https://github.com/charleshaa/ChurchUI",
+  "name": "angular-electron",
+  "version": "3.1.0",
+  "description": "Angular 5 with Electron (Typescript + SASS + Hot Reload)",
+  "homepage": "https://github.com/maximegris/angular-electron",
   "author": {
-    "name": "Charles Haarman",
-    "email": "charleshaarman@gmail.com"
+    "name": "Maxime GRIS",
+    "email": "maxime.gris@gmail.com"
   },
   "keywords": [
     "angular",
@@ -34,7 +34,12 @@
     "pree2e:protractor": "wait-on http-get://localhost:4200/ && protractor ./protractor.conf.js",
     "e2e": "npm-run-all -p pree2e:build pree2e:protractor"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@angular/animations": "^5.2.9",
+    "@angular/cdk": "^5.2.4",
+    "@angular/material": "^5.2.4",
+    "bootstrap": "^4.0.0"
+  },
   "devDependencies": {
     "@angular/cli": "1.7.1",
     "@angular/common": "5.2.5",
