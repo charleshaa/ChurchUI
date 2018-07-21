@@ -1,0 +1,19 @@
+<div class="row mt-5">
+  <div class="col-md-12">
+      <form class="command-line">
+        <mat-form-field class="w-100">
+          <input (change)="sendCmd($event)" matInput placeholder="Insert your command"  value="">
+        </mat-form-field>
+      </form>
+  </div>
+</div>
+<div class="row mt-5">
+  <div class="col-md-12">
+      <mat-list>
+        <div *ngFor="let msg of messages">
+            <mat-list-item>{{msg.data}}</mat-list-item>
+            <mat-divider></mat-divider>
+        </div>
+      </mat-list>
+  </div>
+</div>

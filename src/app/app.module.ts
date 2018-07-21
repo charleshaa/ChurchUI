@@ -19,6 +19,11 @@ import { WebviewDirective } from './directives/webview.directive';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { MatInputModule } from '@angular/material/input';
+import { MatListModule } from '@angular/material/list';
+import { ConsoleComponent } from './components/console/console.component';
+import { SocketService } from './services/socket.service';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -29,13 +34,17 @@ export function HttpLoaderFactory(http: HttpClient) {
   declarations: [
     AppComponent,
     HomeComponent,
-    WebviewDirective
+    WebviewDirective,
+    ConsoleComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
     AppRoutingModule,
+    MatInputModule,
+    MatListModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -44,7 +53,7 @@ export function HttpLoaderFactory(http: HttpClient) {
       }
     })
   ],
-  providers: [ElectronService],
+  providers: [ElectronService, SocketService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
